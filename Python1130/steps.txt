@@ -1,0 +1,28 @@
+部屬 (deploy) 到 Heroku
+1. 建立一個 App
+
+2. 安裝 Heroku CLI (命令列工具) - heroku
+3. 安裝 Git 命令列工具 - git
+4. 在命令列登入 Heroku - heroku login
+
+5. 初始化新的 Git Repository
+    5.1 初始化: git init
+    5.2 設定遠端網址: heroku git:remote -a 專案名稱
+
+6. 確認 Git Repository 的狀況 - git status
+    # 紅紅的是因為還沒將該檔案納入管理, 納入管理後會呈現綠色
+
+7. 更新一個版本 (每次有更動可直接輸入下列三行更新)
+    7.1 把更動的檔案加入追蹤管理: git add .
+    7.2 建立一個版本 (Commit): git commit -m "版本紀錄訊息"
+    7.3 將最新的版本送到遠端 (Heroku): git push heroku master
+    # 得到網址: https://test-1130.herokuapp.com/
+
+# 新增 runtime.txt, 並輸入 python3.8.0, 讓 Heroku 知道虛擬執行環境
+# 新增 requirements.txt, 並輸入 Flask、gunicorn
+# 新增 Procfile, 輸入 web: gunicorn app:app, 讓綠色獨角獸執行程式
+
+# 輸入 !+Tab 可直接打出 html 格式
+
+Download and install the Heroku CLI (https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+Git installation (https://git-scm.com/) # git: 版本管理工具
